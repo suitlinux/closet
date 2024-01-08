@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+
+/usr/bin/repo-add $1".db.tar.gz" *.pkg.tar.*
+rm $1".db"
+cp $1".db.tar.gz" $1".db"
+rm $1".files"
+cp $1".files.tar.gz" $1".files"
+rm *.old
