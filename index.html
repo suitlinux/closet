@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closet - Arch Linux Package Repository</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 3rem;
+        }
+        
+        h1 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+            font-size: 2.5rem;
+        }
+        
+        .subtitle {
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .section {
+            margin: 2rem 0;
+        }
+        
+        h2 {
+            color: #764ba2;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #667eea;
+        }
+        
+        pre {
+            background: #f5f5f5;
+            padding: 1rem;
+            border-radius: 6px;
+            overflow-x: auto;
+            border-left: 4px solid #667eea;
+        }
+        
+        code {
+            font-family: 'Courier New', monospace;
+            color: #333;
+        }
+        
+        .command {
+            background: #2d2d2d;
+            color: #f8f8f2;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+        }
+        
+        .command code {
+            color: #f8f8f2;
+        }
+        
+        ul {
+            margin-left: 2rem;
+            margin-top: 1rem;
+        }
+        
+        li {
+            margin: 0.5rem 0;
+        }
+        
+        a {
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        .packages-link {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            margin-top: 1rem;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        
+        .packages-link:hover {
+            background: #764ba2;
+            text-decoration: none;
+        }
+        
+        .info-box {
+            background: #e8f4f8;
+            border-left: 4px solid #667eea;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+        }
+        
+        .footer {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #ddd;
+            text-align: center;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚪 Closet</h1>
+        <p class="subtitle">Arch Linux Package Repository</p>
+        
+        <div class="section">
+            <h2>About</h2>
+            <p>Closet is a custom package repository for Arch-based Linux distributions. It contains curated packages that complement the official Arch Linux repositories.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Adding the Repository</h2>
+            <p>To use this repository, add the following to your <code>/etc/pacman.conf</code> file:</p>
+            <div class="command">
+                <code>[closet]<br>
+Server = https://suitlinux.github.io/closet/$arch<br>
+SigLevel = Optional TrustAll</code>
+            </div>
+            <p>Then update your package database:</p>
+            <div class="command">
+                <code>sudo pacman -Sy</code>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Installing Packages</h2>
+            <p>Once the repository is added, you can install packages using:</p>
+            <div class="command">
+                <code>sudo pacman -S package-name</code>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Available Packages</h2>
+            <div class="info-box">
+                <p>Browse the available packages in the <a href="./x86_64/" class="packages-link">x86_64 directory</a></p>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Repository Information</h2>
+            <ul>
+                <li><strong>Architecture:</strong> x86_64</li>
+                <li><strong>Repository Name:</strong> closet</li>
+                <li><strong>Database:</strong> <a href="./x86_64/closet.db">closet.db</a></li>
+                <li><strong>Files Database:</strong> <a href="./x86_64/closet.files">closet.files</a></li>
+            </ul>
+        </div>
+        
+        <div class="footer">
+            <p>Maintained by <a href="https://github.com/suitlinux">SuitLinux</a></p>
+            <p><a href="https://github.com/suitlinux/closet">View on GitHub</a></p>
+        </div>
+    </div>
+</body>
+</html>
